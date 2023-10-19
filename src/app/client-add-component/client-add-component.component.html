@@ -1,0 +1,10 @@
+<form>
+    <b>AÑADE UN CLIENTE:</b>
+    <input type="text" placeholder="firstName" id="firstNameInput" [(ngModel)]="firstNameInputValue">
+    <input type="text" placeholder="lastName" id="lastNameInput" [(ngModel)]="lastNameInputValue">
+    <input type="text" placeholder="dni" id="dniInput" [(ngModel)]="dniInputValue">
+    <input type="text" placeholder="email" id="emailInput" [(ngModel)]="emailInputValue">
+    <input type="text" placeholder="address" id="addressInput" [(ngModel)]="addressInputValue">
+    <br>
+    <button type="submit" id="clienteSubmit" (click)="addClient()">ENVIAR</button>
+</form>
