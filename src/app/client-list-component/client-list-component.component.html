@@ -1,18 +1,26 @@
-<b>MOSTRAR CLIENTES</b>
-<button type="button" id="showClients" (click)="showClients()">MOSTRAR</button>
-
-<table>
-    <thead>
-        <tr>
-            <th>Client ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>DNI</th>
-            <th>EMAIL</th>
-            <th>ADDRESS</th>
-        </tr>
-    </thead>
-
-    <tbody></tbody>
-</table>
-
+<main class="d-flex justify-content-center align-items-center vh-100">
+    <section>
+        <table class="table table-bordered table-striped table-hover mx-auto text-center" style="width: 80%;">
+            <thead>
+                <tr>
+                    <th scope="col">Client ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Dni</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let client of clientList">
+                    <th scope="row"> {{client.clientId}} </th>
+                    <td> {{client.firstName}} </td>
+                    <td> {{client.lastName}} </td>
+                    <td> {{client.dni}} </td>
+                    <td> {{client.email}} </td>
+                    <td> {{client.address}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>

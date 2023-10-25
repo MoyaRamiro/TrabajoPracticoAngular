@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ClientService } from '../client.service';
+import { Client } from '../models/client-model';
+
 
 @Component({
   selector: 'app-client-add-component',
@@ -10,22 +12,26 @@ export class ClientAddComponentComponent {
                     ///////////
   constructor(private Servicio : ClientService){}
 
-  firstNameInputValue : string | undefined;
-  lastNameInputValue : string | undefined;
-  dniInputValue : number | undefined;
-  emailInputValue : string | undefined;
-  addressInputValue : string | undefined;
+
+  firstNameInputValue : string = "";
+  lastNameInputValue : string = "";
+  dniInputValue : number = -1;
+  emailInputValue : string = "";
+  addressInputValue : string = ""
+
 
   addClient(){
-    let client = {
-      clientId : this.Servicio.getNextId(),
-      firstName: this.firstNameInputValue,
-      lastName: this.lastNameInputValue,
-      dni: this.dniInputValue,
-      email: this.emailInputValue,
-      address: this.addressInputValue
-    }
+    let client = new Client();
+    client.clientId = this.Servicio.getNextId();
+    client.firstName = this.firstNameInputValue;
+    client.lastName = this.lastNameInputValue;
+    client.dni = this.dniInputValue;
+    client.email = this.emailInputValue;
+    client.address = this.addressInputValue;
+   
 
-    this.Servicio.clientList.push(client);
+
+    this.Servicio.addClient(client);
+    console.log(this.Servicio.getClients());
   }
 }
