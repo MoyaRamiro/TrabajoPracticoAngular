@@ -1,0 +1,9 @@
+form {
+    padding-bottom: 5rem;
+    padding-right: 5rem;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}

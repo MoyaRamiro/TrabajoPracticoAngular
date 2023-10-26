@@ -9,6 +9,7 @@
                     <th scope="col">Dni</th>
                     <th scope="col">Email</th>
                     <th scope="col">Address</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,6 +20,7 @@
                     <td> {{client.dni}} </td>
                     <td> {{client.email}} </td>
                     <td> {{client.address}} </td>
+                    <button type="button" (click)="deleteClient(client)">DELETE</button>
                 </tr>
             </tbody>
         </table>

@@ -5,12 +5,13 @@ import { Client } from '../models/client-model';
 
 @Component({
   selector: 'app-client-add-component',
-  templateUrl: './client-add-component.component.html',
-  styleUrls: ['./client-add-component.component.css']
+  templateUrl: './client-add-edit-component.component.html',
+  styleUrls: ['./client-add-edit-component.component.css']
 })
 export class ClientAddComponentComponent {
                     ///////////
-  constructor(private Servicio : ClientService){}
+  constructor(private Servicio : ClientService){};
+
 
 
   firstNameInputValue : string = "";
@@ -34,4 +35,7 @@ export class ClientAddComponentComponent {
     this.Servicio.addClient(client);
     console.log(this.Servicio.getClients());
   }
+
+  
+
 }
