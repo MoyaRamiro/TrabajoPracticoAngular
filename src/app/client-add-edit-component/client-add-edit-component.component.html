@@ -1,21 +1,21 @@
 <section>
     <form>
-    <b>AÑADE UN CLIENTE:</b>
+    <b id="addCartel">AÑADE UN CLIENTE:</b>
     <br><br>
     <b>Nombre: </b>
-    <input type="text" placeholder="firstName" name="firstNameInput" [(ngModel)]="firstNameInputValue">
+    <input type="text" placeholder="firstName" name="firstNameInput" formControlName="firstNameInputValue">
     <br><br>
     <b>Apellido: </b>
-    <input type="text" placeholder="lastName" name="lastNameInput" [(ngModel)]="lastNameInputValue">
+    <input type="text" placeholder="lastName" name="lastNameInput" formControlName="lastNameInputValue">
     <br><br>
     <b>Dni: </b>
-    <input type="text" placeholder="dni" name="dniInput" [(ngModel)]="dniInputValue">
+    <input type="text" placeholder="dni" name="dniInput" formControlName="dniInputValue">
     <br><br>
     <b>Email: </b>
-    <input type="text" placeholder="email" name="emailInput" [(ngModel)]="emailInputValue">
+    <input type="text" placeholder="email" name="emailInput" formControlName="emailInputValue">
     <br><br>
     <b>Address: </b>
-    <input type="text" placeholder="address" name="addressInput" [(ngModel)]="addressInputValue">
+    <input type="text" placeholder="address" name="addressInput" formControlName="addressInputValue">
     <br><br>
     <button type="submit" id="clienteSubmit" (click)="addClient()">ENVIAR</button>
 
