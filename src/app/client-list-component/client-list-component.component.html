@@ -25,5 +25,30 @@
                 </tr>
             </tbody>
         </table>
+
+        <section>
+            <form *ngIf="isEditing" [formGroup]="editForm">
+                <br><br>
+                <b>EDITA UN CLIENTE:</b>
+                <br><br>
+                <b>Nombre: </b>
+                <input type="text" name="firstNameEdit" formControlName="firstNameEditValue">
+                <br><br>
+                <b>Apellido: </b>
+                <input type="text" name="lastNameEdit" formControlName="lastNameEditValue">
+                <br><br>
+                <b>Dni: </b>
+                <input type="text" name="dniEdit" formControlName="dniEditValue">
+                <br><br>
+                <b>Email: </b>
+                <input type="text" name="emailEdit" formControlName="emailEditValue">
+                <br><br>
+                <b>Address: </b>
+                <input type="text" name="addressEdit" formControlName="addressEditValue">
+                <br><br>
+                <button type="submit" id="clienteSubmit" (click)="patchClient()">ENVIAR</button>
+            </form>
+        
+        </section>
     </section>
 </main>

@@ -1,5 +1,5 @@
 <section>
-    <form>
+    <form [formGroup]="studentForm">
     <b id="addCartel">AÑADE UN CLIENTE:</b>
     <br><br>
     <b>Nombre: </b>
@@ -18,8 +18,6 @@
     <input type="text" placeholder="address" name="addressInput" formControlName="addressInputValue">
     <br><br>
     <button type="submit" id="clienteSubmit" (click)="addClient()">ENVIAR</button>
-
     </form>
 
-    <p id="editP"></p>
 </section>

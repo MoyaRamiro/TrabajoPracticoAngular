@@ -35,6 +35,8 @@ export class ClientService {
     this.clientList = this.clientList.filter(element => element != cliente);
   }
  
-
+  uptadeClient(clienteActualizar : Client){
+    this.clientList = this.clientList.map(cliente => cliente.clientId == clienteActualizar.clientId ? clienteActualizar : cliente);
+  }
 }
 

@@ -34,16 +34,16 @@ export class ClientAddComponentComponent {
     client.address = this.studentForm.get("addressInputValue")?.value!;
    
     let cartelAdd = document.getElementById("addCartel") as HTMLParagraphElement
-    cartelAdd.innerHTML = "AÑADIR";
+    cartelAdd.textContent = "AÑADIR";
 
     this.Servicio.addClient(client);
-    console.log(this.Servicio.getClients());
+    this.studentForm.reset();
   }
 
-  editClient(cliente : Client){
+  /*editClient(cliente : Client){
 
     let cartelAdd = document.getElementById("addCartel") as HTMLParagraphElement
-    cartelAdd.innerHTML = "EDITAR";
+    cartelAdd.textContent = "EDITAR";
 
     this.studentForm.setValue({
       'firstNameInputValue' : cliente.firstName!,
@@ -55,7 +55,7 @@ export class ClientAddComponentComponent {
 
     this.Servicio.getClients().indexOf(cliente);
 
-  }
+  }*/
 
   
 
